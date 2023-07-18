@@ -19,4 +19,21 @@ public class Contador {
 
         
     }
+
+    /**
+     * Conta os números entre dois valores inteiros.
+     * @param one o primeiro valor inteiro.
+     * @param two o segundo valor inteiro.
+     * @throws ParametrosInvalidosException se o valor de 'one' for maior do que 'two'.
+     */
+    static void contar(int one, int two) throws ParametrosInvalidosException {
+        if (one > two) {
+            throw new ParametrosInvalidosException();
+        } else {
+            int loop = two - one;
+            for (int i = 0; i < loop; i++) {
+                System.out.println("Imprimindo o número " + (i+1));
+            }
+        }
+    }
 }
