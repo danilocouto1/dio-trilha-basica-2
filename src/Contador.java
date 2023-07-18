@@ -17,7 +17,14 @@ public class Contador {
 		System.out.println("Digite o segundo parâmetro");
 		int parametroDois = sc.nextInt();
 
-        
+        //Try-catch para a função contar e o tratamento caso a exception estoure
+        try {
+            contar(parametroUm, parametroDois);
+        } catch (Exception e) {
+            System.out.println("O segundo deve ser maior que o primeiro!");
+        }
+
+        sc.close();
     }
 
     /**
